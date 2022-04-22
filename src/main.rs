@@ -9,7 +9,7 @@ fn main() {
             Command::new("login")
                 .about("Login with your AtCoder account.")
                 .arg(arg!(--user <VALUE>))
-                .arg(arg!(--pass <VALUE>)),
+                .arg(arg!(--token <VALUE>)),
         )
         .get_matches();
 
@@ -21,8 +21,8 @@ fn main() {
 
 fn login(matches: &ArgMatches) {
     println!(
-        "user:{:?} pass:{:?}",
+        "user:{:?} token:{:?}",
         matches.value_of("user").unwrap(),
-        matches.value_of("pass").unwrap(),
+        matches.value_of("token").unwrap(),
     )
 }

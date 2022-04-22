@@ -1,8 +1,13 @@
 [package]
+about = "CLI to test your code on local."
+author = "Lee Unseo"
 edition = "2021"
 name = "atcli"
-author = "Lee Unseo"
-about = "CLI to test your code on local."
 version = "0.1.0"
+
 [dependencies]
-clap = { version = "3.1.9", features = ["derive", "cargo"] }
+reqwest = "0.11.10"
+
+[dependencies.clap]
+features = ["derive", "cargo"]
+version = "3.1.9"
